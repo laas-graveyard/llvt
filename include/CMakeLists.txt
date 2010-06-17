@@ -1,7 +1,10 @@
-#
-# Low Level Vision Tools
-# ----------------------
-# Headers
+##----------------------------------------------------
+## Copyright 2010, CNRS-AIST JRL
+## Author Clement Petit
+##
+## Low Level Vision Tools
+## Headers
+##----------------------------------------------------
 
 # Add header files
 include (include-toolbox)

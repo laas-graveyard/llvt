@@ -1,8 +1,10 @@
-#
-# Low Level Vision Tools
-# ----------------------
-# Library target
-#
+##----------------------------------------------------
+## Copyright 2010, CNRS-AIST JRL
+## Author Clement Petit
+##
+## Low Level Vision Tools
+## Library target
+##----------------------------------------------------
 
 # Library name
 set(${PROJECT_NAME}_LIBRARY_NAME llvt-0)

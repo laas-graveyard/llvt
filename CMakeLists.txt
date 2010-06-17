@@ -1,10 +1,12 @@
-#
-# Low Level Vision Tools
-# ----------------------
-# This module gathers all reusable tools
-# for both server and client of the Low
-# Level Vision solution.
-#
+##----------------------------------------------------
+## Copyright 2010, CNRS-AIST JRL
+## Author Clement Petit
+##
+## Low Level Vision Tools
+## This module gathers all reusable tools
+## for both server and client of the Low
+## Level Vision solution.
+##----------------------------------------------------
 
 # Project declaration
 cmake_minimum_required (VERSION 2.6)
