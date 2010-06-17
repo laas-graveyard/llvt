@@ -1,0 +1,21 @@
+#
+# Low Level Vision Tools
+# ----------------------
+# This module gathers all reusable tools
+# for both server and client of the Low
+# Level Vision solution.
+#
+
+Installation:
+
+  $ mkdir build && cd build
+  $ cmake .. -DCMAKE_INSTALL_PREFIX=your/install/prefix
+  $ make install
+
+Explanation:
+
+  This repository contains all shared sources, headers
+	and cmake modules between Low Level Vision server and
+	client.
+	Note you will need to install first common cmake modules
+	located in CMakeModules.git repository.
