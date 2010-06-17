@@ -14,15 +14,18 @@ project (LLVT)
 list (
 	APPEND 
 	CMAKE_MODULE_PATH 
-	${CMAKE_SOURCE_DIR}/share/llvt
-	$ENV{ROBOTPKG_BASE}/share/cmake/common
+	$ENV{ROBOTPKG_BASE}/share/cmake
 )
 
 # Dependent packages
+find_package(
+	Modules
+	COMPONENTS
+	image
+)
 find_package(OmniORB4)
 
 # Source files exploration
 add_subdirectory (include)
-add_subdirectory (share)
 add_subdirectory (src)
 
