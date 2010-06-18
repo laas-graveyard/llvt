@@ -5,10 +5,10 @@
  *  \author Clement Petit
  * ---------------------------------------------------- */
 
-#ifndef _DHFSM_ACTION_WITH_LLVS_BASE_H_ 
-#define _DHFSM_ACTION_WITH_LLVS_BASE_H_ 
+#ifndef _ACTION_WITH_LLVS_BASE_H 
+#define _ACTION_WITH_LLVS_BASE_H 
 
-#include "CORBAReference.h"
+#include <llvs/tools/CORBAClient.h>
 
 namespace LLVClient
 {
@@ -53,4 +53,4 @@ namespace LLVClient
 	};
 }
 
-#endif //!_DHFSM_ACTION_WITH_LLVS_BASE_H_
+#endif //!_ACTION_WITH_LLVS_BASE_H

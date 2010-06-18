@@ -5,14 +5,21 @@
  *  \author Clement Petit
  * ---------------------------------------------------- */
 
-CORBAClient::CORBAClient()
-  : m_CORBAReference(NULL),
-    m_ServiceName(""),
-    m_ServiceKind("")
+#include <llvs/tools/CORBAClient.h>
+#include <llvs/tools/Debug.h>
+
+/* Default connection parameters */
+const std::string LLVClient::CORBAClient::DEFAULT_LLVS_SERVICE_NAME("LowLevelVisionSystem");
+const std::string LLVClient::CORBAClient::DEFAULT_LLVS_SERVICE_KIND("VisionServer");
+
+LLVClient::CORBAClient::CORBAClient()
+  : m_ServiceName(""),
+    m_ServiceKind(""),
+    m_CORBAReference(NULL)
 {
 }
 
-CORBAClient::~CORBAClient()
+LLVClient::CORBAClient::~CORBAClient()
 {
 	if(m_CORBAReference)
 	{
@@ -20,65 +27,30 @@ CORBAClient::~CORBAClient()
 	}
 }
 
-const std::string & ActionWithLLVS::GetServiceName() const
+const std::string&
+LLVClient::CORBAClient::GetServiceName()
+const
 {
   return m_ServiceName;
 }
 
-const std::string & ActionWithLLVS::GetServiceKind() const
+const std::string& 
+LLVClient::CORBAClient::GetServiceKind()
+const
 {
   return m_ServiceKind;
 }
 
-CORBAReference * ActionWithLLVS::getCORBAReference() const
+LLVClient::CORBAReference*
+LLVClient::CORBAClient::getCORBAReference()
+const
 {
   return m_CORBAReference;
 }
 
-void ActionWithLLVS::setCORBAReference(CORBAReference * aCorbaRef)
+void
+LLVClient::CORBAClient::setCORBAReference(CORBAReference* aCorbaRef)
 {
   m_CORBAReference = aCorbaRef;
 }
 
-template<class DataType>
-DataType& 
-Connection(std::string& ServiceName = DEFAULT_LLVS_SERVICE_NAME
-           std::string& ServiceKind = DEFAULT_LLVS_SERVICE_KIND)
-{
-	if (m_CORBAReference == NULL)
-	{
-		try
-		{
-			m_CORBAReference = new CORBAReference();
-		}
-		catch(...)
-		{
-			throw("Unable to create a CORBA Reference object");
-		}
-		if (!m_CORBAReference->InitORB())
-		{	
-			throw("Unable to initialize the ORB. ");
-		}
-	}
-
-	CORBA::Object_ptr obj(m_CORBAReference->getObjectReference(m_ServiceName,m_ServiceKind));
-	ODEBUG( "Able to get the reference for :" << m_ServiceName << " " 
-			<< m_ServiceKind << "CORBAReference : "<< m_CORBAReference );
-
-	if (CORBA::is_nil(obj))
-	{
-		throw("Unable to find object: " << m_ServiceName << " " << m_ServiceKind);
-	}
-
-	try
-	{
-		m_ServiceKind = ServiceKind;
-		m_ServiceName = ServiceName;
-		return DataType::_narrow(obj);
-	}
-	catch(...)
-	{
-		throw("Unable to narrow :" << m_ServiceName << " " << m_ServiceKind << "CORBAReference : "<< m_CORBAReference);
-	}
-
-}

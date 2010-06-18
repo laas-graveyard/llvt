@@ -14,8 +14,10 @@ include_directories(${${PROJECT_NAME}_INCLUDE_DIRS})
 
 # Build library
 add_library(
-  llvt-0
-  CORBAReference.cpp
+	llvt-0 SHARED
+	CORBAReference.cpp
+	CORBAClient.cpp
+	ActionWithLLVSBase.cpp
 )	
 
 # Add custom flags
@@ -23,7 +25,13 @@ set_target_properties(
 	${${PROJECT_NAME}_LIBRARY_NAME}
 	PROPERTIES
  		COMPILE_FLAGS
-			"-DOMNIORB4 -g	-Wall	-Wfatal-errors"
+			"-DOMNIORB4 -g -Wall -Wfatal-errors"
+)
+
+# Add link to omniORB4
+target_link_libraries(
+	${${PROJECT_NAME}_LIBRARY_NAME}
+	omniORB4
 )
 
 # Install it

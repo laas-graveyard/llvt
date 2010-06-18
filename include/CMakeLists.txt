@@ -15,5 +15,8 @@ ADD_HEADERS(
 	FILES
 	  Debug.h
 		CORBAReference.h
+		CORBAClient.h
+		ActionWithLLVSBase.h
+		CORBAClient.hxx
 	INSTALL
 )

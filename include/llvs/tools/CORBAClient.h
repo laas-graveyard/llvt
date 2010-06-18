@@ -5,19 +5,19 @@
  *  \author Clement Petit
  * ---------------------------------------------------- */
 
-#ifndef _DHFSM_CORBA_CLIENT_H_ 
-#define _DHFSM_CORBA_CLIENT_H_
+#ifndef _CORBA_FOR_LLVS_CLIENT_H 
+#define _CORBA_FOR_LLVS_CLIENT_H
 
-#include "CORBAReference.h"
-
-/* Default connection parameters */
-#define DEFAULT_LLVS_SERVICE_NAME "LowLevelVisionSystem"
-#define DEFAULT_LLVS_SERVICE_KIND "VisionServer"
+#include <llvs/tools/CORBAReference.h>
 
 namespace LLVClient
 {
 	class CORBAClient
 	{
+		/* Default connection parameters */
+		static const std::string DEFAULT_LLVS_SERVICE_NAME;
+		static const std::string DEFAULT_LLVS_SERVICE_KIND;
+
 		public:
 	    /*! \brief Constructor. */
 			CORBAClient();
@@ -33,16 +33,16 @@ namespace LLVClient
 	    
 	    
 	    /*! \brief Get the CORBA reference. */
-	    CORBAReference * getCORBAReference() const;
+			LLVClient::CORBAReference* getCORBAReference() const;
 	    
 	    /*! \brief Set the CORBA reference. */
 	    void setCORBAReference(CORBAReference * aCorbaRef);
 	    
 	    /*! \brief Connection to the server. 
 	     */
-			template<class DataType>
-	    DataType GetService(std::string& ServiceName = DEFAULT_LLVS_SERVICE_NAME,
-					                std::string& ServiceKind = DEFAULT_LLVS_SERVICE_KIND) throw(const char*);
+			template<class DataType, class DataType_var>
+	    DataType_var GetServicePort(const std::string& ServiceName = DEFAULT_LLVS_SERVICE_NAME,
+					                const std::string& ServiceKind = DEFAULT_LLVS_SERVICE_KIND) throw(const char*);
   
 		protected:
   	  /*! \brief Store the service name (set by default to LLVS one). */
@@ -52,8 +52,10 @@ namespace LLVClient
   	  std::string m_ServiceKind;
   	  
   	  /*! Pointer to the CORBA reference object. */
-  	  CORBAReference* m_CORBAReference;
+			LLVClient::CORBAReference* m_CORBAReference;
 	};
 }
 
-#endif //!_DHFSM_CORBA_CLIENT_H_
+#include <llvs/tools/CORBAClient.hxx>
+
+#endif //!_CORBA_FOR_LLVS_CLIENT_H

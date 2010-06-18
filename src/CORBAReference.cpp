@@ -1,5 +1,11 @@
-#include "llvs/tools/CORBAReference.h"
-#include "llvs/tools/Debug.h"
+/*! \brief 
+ * \author Olivier Stasse
+ * Copyright:  JRL, CNRS-AIST.
+ * Date: 12/08/2008
+ */
+
+#include <llvs/tools/CORBAReference.h>
+#include <llvs/tools/Debug.h>
 
 LLVClient::CORBAReference::CORBAReference()
 {
