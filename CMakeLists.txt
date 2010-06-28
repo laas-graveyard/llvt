@@ -17,6 +17,7 @@ list (
 	APPEND 
 	CMAKE_MODULE_PATH 
 	$ENV{ROBOTPKG_BASE}/share/cmake
+	${CMAKE_SOURCE_DIR}/share
 )
 
 # Dependent packages
@@ -30,5 +31,6 @@ find_package(OmniORB4)
 
 # Source files exploration
 add_subdirectory (include)
+add_subdirectory (share)
 add_subdirectory (src)
 
