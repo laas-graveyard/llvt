@@ -21,10 +21,6 @@ ADD_LLV_CLIENT(
 		CORBAReference.cpp
 		CORBAClient.cpp
 		ActionWithLLVSBase.cpp
-	COMPILE_FLAGS
-			"-DOMNIORB4 -g -Wall -Wfatal-errors"
-	LINK_WITH
-		omniORB4
 	FORCE_IDL_COMPILATION
 )
 

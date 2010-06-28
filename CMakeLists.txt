@@ -27,7 +27,8 @@ find_package(
 	image
 	middleware
 )
-find_package(OmniORB4)
+include(LLVT-toolbox)
+ADD_LLV_PACKAGES(OmniORB4)
 
 # Source files exploration
 add_subdirectory (include)
