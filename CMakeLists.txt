@@ -24,6 +24,7 @@ find_package(
 	Modules
 	COMPONENTS
 	image
+	middleware
 )
 find_package(OmniORB4)
 
