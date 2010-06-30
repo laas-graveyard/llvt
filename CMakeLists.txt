@@ -27,6 +27,9 @@ find_package(
 	image
 	middleware
 )
+
+# Use its own environement to install
+find_package(LLVT QUIET)
 include(LLVT-toolbox)
 ADD_LLV_PACKAGES(OmniORB4)
 
@@ -35,3 +38,5 @@ add_subdirectory (include)
 add_subdirectory (share)
 add_subdirectory (src)
 
+# Add uninstall target
+ADD_UNINSTALL_TARGET()

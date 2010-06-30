@@ -7,6 +7,7 @@
 ##----------------------------------------------------
 
 include(LLVT-toolbox)
+include(install-toolbox)
 
 # Library name
 set(${PROJECT_NAME}_LIBRARY_NAME llvt-0)

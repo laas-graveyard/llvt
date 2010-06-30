@@ -13,11 +13,13 @@ include (include-toolbox)
 include (LLVT-idl-config)
 
 # Convert them for the generic macro 
-ADD_COMPONENT_FILES( 
+ADD_COMPONENT_FILES(
+	PREFIXES
+		llvs
 	FILES 
 		${LLVT_DEFAULT_IDLS}
 		# Add there non-default idls
-	INSTALL share/idl/llvs
+	INSTALL share/idl
 )
 
 # Add default config file
