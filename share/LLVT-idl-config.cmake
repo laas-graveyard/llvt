@@ -18,4 +18,5 @@ set(
 	ServerCommand.idl
 	StereoVision.idl
 	visionsensor.idl
+	BtlSlamInterface.idl
 )

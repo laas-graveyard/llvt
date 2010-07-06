@@ -31,6 +31,8 @@
 #include "StereoVision.idl"
 #include "ModelTrackerInterface.idl"
 #include "PointTrackerInterface.idl"
+#include "BtlSlamInterface.idl"
+
 /**
  * Double buffer
  */
@@ -353,11 +355,14 @@ interface LowLevelVisionSystem
   /* Returns the StereoVision object */
   StereoVision getStereoVision();
 
-  /* Retuns the Model tracker object. */
+  /* Returns the Model tracker object. */
   ModelTrackerInterface getModelTracker();
 
-  /* Retuns the Model tracker object. */
+  /* Returns the Point tracker object. */
   PointTrackerInterface getPointTracker();
+  
+	/* Returns Btl SLAM servant */
+  BtlSlamInterface getBtlSlamInterface();
 };
 
 

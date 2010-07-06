@@ -1,0 +1,18 @@
+/*************************************************************************/
+/**  Copyright 2010, CNRS-AIST JRL                                      **/
+/**  \project Btl SLAM for LLVS                                         **/
+/**  \author Clement Petit                                              **/
+/*************************************************************************/
+
+interface BtlSlamInterface
+{
+	typedef double Vector3d[3];
+
+	struct Pose3D
+	{
+		Vector3d position;
+		Vector3d orientation;
+	};
+
+	Pose3D getCameraPose();
+};
