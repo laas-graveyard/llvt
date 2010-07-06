@@ -29,7 +29,7 @@ find_package(
 )
 
 # Use its own environement to install
-find_package(LLVT QUIET)
+set(MODULE_LLVT_TOOLBOX_CHECK QUIET)
 include(LLVT-toolbox)
 ADD_LLV_PACKAGES(OmniORB4)
 
