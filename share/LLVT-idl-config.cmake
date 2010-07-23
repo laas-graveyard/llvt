@@ -19,4 +19,7 @@ set(
 	StereoVision.idl
 	visionsensor.idl
 	BtlSlamInterface.idl
+
+	OpenHRPCommon.idl
+	ViewSimulator.idl
 )
