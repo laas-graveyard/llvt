@@ -28,9 +28,6 @@ module OpenHRP {
 	typedef sequence<double, 6> DblSequence6;
 	typedef sequence<double, 9> DblSequence9;
 
-	typedef sequence<DblSequence> DblSequenceSequence;
-	typedef sequence<DblArray3>   DblArray3Sequence;
-	
 	/**
 	 * @if jp
 	 * リンク位置/姿勢 

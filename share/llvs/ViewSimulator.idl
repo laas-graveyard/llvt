@@ -206,15 +206,6 @@ module OpenHRP {
        * @endif
        */
       long	height;
-
-      /**
-       * @if jp
-       * フレームレート[fps]
-       * @else
-       * frame rate[fps]
-       * @endif 
-       */
-      float     frameRate;
     };
 
     /**
