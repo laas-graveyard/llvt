@@ -21,29 +21,29 @@ LLVClient::CORBAClient::CORBAClient()
 
 LLVClient::CORBAClient::~CORBAClient()
 {
-  if(m_CORBAReference)
-    {
-      delete m_CORBAReference;
-    }
+	if(m_CORBAReference)
+	{
+		delete m_CORBAReference;
+	}
 }
 
 const std::string&
 LLVClient::CORBAClient::GetServiceName()
-  const
+const
 {
   return m_ServiceName;
 }
 
 const std::string& 
 LLVClient::CORBAClient::GetServiceKind()
-  const
+const
 {
   return m_ServiceKind;
 }
 
 LLVClient::CORBAReference*
 LLVClient::CORBAClient::getCORBAReference()
-  const
+const
 {
   return m_CORBAReference;
 }
