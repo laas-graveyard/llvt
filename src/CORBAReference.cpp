@@ -4,6 +4,7 @@
  * Date: 12/08/2008
  */
 
+#include <cstdio>
 #include <llvs/tools/CORBAReference.h>
 #include <llvs/tools/Debug.h>
 
