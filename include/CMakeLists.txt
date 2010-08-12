@@ -14,6 +14,7 @@ ADD_HEADERS(
 	  llvs/tools
 	FILES
 	  Debug.h
+		corba-handler.h
 		CORBAReference.h
 		CORBAClient.h
 		ActionWithLLVSBase.h

@@ -16,6 +16,7 @@ ADD_LLV_CLIENT(
 	LIBRARY
 	${${PROJECT_NAME}_LIBRARY_NAME}
 	SOURCES
+		corba-handler.cpp
 		CORBAReference.cpp
 		CORBAClient.cpp
 		ActionWithLLVSBase.cpp
