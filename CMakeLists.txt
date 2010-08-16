@@ -16,7 +16,6 @@ project (LLVT)
 list (
 	APPEND 
 	CMAKE_MODULE_PATH 
-	$ENV{ROBOTPKG_BASE}/share/cmake
 	${CMAKE_SOURCE_DIR}/share
 )
 

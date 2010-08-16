@@ -10,7 +10,7 @@ find_package (Modules)
 include (include-toolbox)
 
 # Retrieve default included IDL list
-include (LLVT-idl-config)
+INCLUDE_CONFIG(LLVT-idl)
 
 # Convert them for the generic macro 
 ADD_COMPONENT_FILES(
@@ -25,6 +25,6 @@ ADD_COMPONENT_FILES(
 # Add default config file
 ADD_COMPONENT_FILES(
 	FILES
-		LLVT-idl-config.cmake
+		LLVT-idlConfig.cmake
 	INSTALL share/cmake/image
 )
