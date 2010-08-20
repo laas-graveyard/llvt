@@ -14,8 +14,8 @@ project (LLVT)
 
 # Project specific module files
 list (
-	APPEND 
-	CMAKE_MODULE_PATH 
+	INSERT
+	CMAKE_MODULE_PATH 0
 	${CMAKE_SOURCE_DIR}/share
 )
 
