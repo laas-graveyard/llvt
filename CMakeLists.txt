@@ -30,7 +30,7 @@ find_package(
 # Use its own environement to install
 set(MODULE_LLVT_TOOLBOX_CHECK QUIET)
 include(LLVT-toolbox)
-ADD_LLV_PACKAGES(OmniORB4)
+ADD_PACKAGES(OmniORB4)
 
 # Source files exploration
 add_subdirectory (include)
