@@ -14,8 +14,8 @@ project (LLVT)
 
 # Project specific module files
 list (
-	APPEND 
-	CMAKE_MODULE_PATH 
+	INSERT
+	CMAKE_MODULE_PATH 0
 	${CMAKE_SOURCE_DIR}/share
 )
 
@@ -29,6 +29,7 @@ find_package(
 
 # Use its own environement to install
 set(MODULE_LLVT_TOOLBOX_CHECK QUIET)
+set(LLVT_IDL_INCLUDE_DIRS ${${PROJECT_NAME}_SOURCE_DIR}/share)
 include(LLVT-toolbox)
 ADD_PACKAGES(OmniORB4)
 
@@ -36,6 +37,17 @@ ADD_PACKAGES(OmniORB4)
 add_subdirectory (include)
 add_subdirectory (share)
 add_subdirectory (src)
+
+CONFIGURE_FILE(${${PROJECT_NAME}_SOURCE_DIR}/${PROJECT_NAME}.pc.cmake
+		 ${${PROJECT_NAME}_BINARY_DIR}/${PROJECT_NAME}.pc )
+
+# Install the file in the appropriate place.
+SET(install_libdir_pkgconfig lib/pkgconfig)
+
+INSTALL(FILES ${${PROJECT_NAME}_BINARY_DIR}/${PROJECT_NAME}.pc
+	DESTINATION ${install_libdir_pkgconfig}
+        PERMISSIONS OWNER_READ GROUP_READ WORLD_READ OWNER_WRITE
+)
 
 # Add uninstall target
 ADD_UNINSTALL_TARGET()
