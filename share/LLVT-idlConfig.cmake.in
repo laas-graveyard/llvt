@@ -8,18 +8,5 @@
 
 set(
 	LLVT_DEFAULT_IDLS
-	BRep.idl
-	common.idl
-	GetGyroAndAccelerometer.idl
-	LowLevelVisionSystem.idl
-	ModelTrackerInterface.idl
-	PointTrackerInterface.idl
-	Scene.idl
-	ServerCommand.idl
-	StereoVision.idl
-	visionsensor.idl
-	BtlSlamInterface.idl
-
-	OpenHRPCommon.idl
-	ViewSimulator.idl
+	${LLVT_DEFAULT_IDLS_STR}
 )
