@@ -28,6 +28,25 @@ find_package(
 	middleware
 )
 
+# Specify default IDLs.
+set(
+	LLVT_DEFAULT_IDLS
+	BRep.idl
+	common.idl
+	GetGyroAndAccelerometer.idl
+	LowLevelVisionSystem.idl
+	ModelTrackerInterface.idl
+	PointTrackerInterface.idl
+	Scene.idl
+	ServerCommand.idl
+	StereoVision.idl
+	visionsensor.idl
+	BtlSlamInterface.idl
+
+	OpenHRPCommon.idl
+	ViewSimulator.idl
+)
+
 # Use its own environement to install
 set(MODULE_LLVT_TOOLBOX_CHECK QUIET)
 set(LLVT_IDL_INCLUDE_DIRS ${${PROJECT_NAME}_SOURCE_DIR}/share)
