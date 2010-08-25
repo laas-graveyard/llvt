@@ -68,7 +68,7 @@ struct Transform
 	float posY;
 	float posZ;
 	float axisX;
-	float axisY;
+  	float axisY;
 	float axisZ;
 	float angle;
 };
