@@ -38,6 +38,7 @@ set(
 	ModelTrackerInterface.idl
 	PointTrackerInterface.idl
 	Scene.idl
+	server-command-corba.idl
 	ServerCommand.idl
 	StereoVision.idl
 	visionsensor.idl
