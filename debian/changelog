@@ -1,3 +1,9 @@
+llvt (1.0.0.99-2) lucid; urgency=low
+
+  * Add missing CMake file.
+
+ -- Thomas Moulard <thomas.moulard@gmail.com>  Sat, 2 Oct 2010 01:06:00 +0200
+
 llvt (1.0.0.99-1) lucid; urgency=low
 
   * Initial work.
