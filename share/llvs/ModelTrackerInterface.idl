@@ -26,6 +26,8 @@ interface ModelTrackerInterface{
     /*! Homogeneous matrix. */
     HomogeneousMatrix aData;
 
+    /*! Projected CoG */
+    double CoG[2];
   };
 
   /* Position of the object */
