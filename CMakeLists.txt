@@ -11,7 +11,9 @@
 # Project declaration
 cmake_minimum_required (VERSION 2.6.4)
 project (LLVT)
-set(${PROJECT_NAME}_LIBRARY_NAME llvt-0)
+
+SET(${PROJECT_NAME}_LIBRARY_NAME llvt-0)
+SET(PROJECT_VERSION 1.0.0.99)
 
 # Project specific module files
 list (
