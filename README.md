@@ -31,4 +31,4 @@ your machine.
    - usual compilation tools (GCC/G++, make, etc.)
 
 
-[jrl-cmakemodules] http://github.com/jrl-umi3218/jrl-cmakemodules
+[jrl-cmakemodules]: http://github.com/jrl-umi3218/jrl-cmakemodules
