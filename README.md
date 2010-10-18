@@ -25,10 +25,10 @@ The package depends on several packages which have to be available on
 your machine.
 
  - System tools:
-   - [jrl-cmakemodules][jrl-cmakemodules]
+   - [jrl-cmakemodules]
    - CMake (>=2.6)
    - pkg-config
    - usual compilation tools (GCC/G++, make, etc.)
 
 
-[jrl-cmakemodules] http://github.com/jrl-umi3218/jrl-cmakemodules
+[jrl-cmakemodules]: http://github.com/jrl-umi3218/jrl-cmakemodules
